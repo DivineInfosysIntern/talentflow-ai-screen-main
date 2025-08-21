@@ -137,4 +137,5 @@ def screen_resumes():
 
 # --- 4. Start the Server ---
 if __name__ == '__main__':
-    app.run(port=3001, debug=True)
+    port = int(os.environ.get("PORT", 3001))  # Render will set $PORT
+    app.run(host="0.0.0.0", port=port, debug=True)
