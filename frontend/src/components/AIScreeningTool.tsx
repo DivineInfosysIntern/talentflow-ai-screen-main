@@ -43,7 +43,7 @@ export function AIScreeningTool() {
     resumes.forEach(resumeFile => formData.append('resumes', resumeFile));
 
     try {
-      const response = await fetch('http://localhost:3001/api/screen', {
+      const response = await fetch('https://talentflow-ai-screen-main.onrender.com/api/screen', {
         method: 'POST',
         body: formData,
       });
