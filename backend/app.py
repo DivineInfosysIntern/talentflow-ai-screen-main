@@ -22,6 +22,13 @@ if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+
+
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({"message": "TalentFlow AI Screening API is running 🚀"})
+
+
 # --- 2. Helper Functions ---
 def extract_text_from_pdf(file_path):
     """Extracts text content from a PDF file."""
